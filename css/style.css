@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+  
+  .container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+
+  :root{
+    --primary-color: #FFCF0D;
+    --primary-color-hover: #E8B900;
+    --second-color: #FFE476;
+    --second-color-hover: #FFD940;
+    --destaque-color: #0DFF0D;
+  }
+  
+  body{ background: #ddd;}
+  
+  header{ background: white;}
+  
+  header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .logo{
+    color: var(--primary-color);
+    font-size: 30px;
+  }
+
+  .logo a{
+    text-decoration: none;
+  }
+  
+  .busca > form{
+    display: flex;
+  }
+  
+  .busca input[type="text"]{
+    border: none;
+    outline: none;
+    background: #ccc;
+    height: 40px;
+    width:450px;
+    padding-left: 20px;
+    border-radius: 10px 0 0 10px;
+    font-size: 17px;
+    color: #595959;
+  }
+  
+  .busca button{
+    height: 40px;
+    width: 40px;
+    margin-left: -4px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    background: var(--second-color);
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  .busca button:hover{
+    background: var(--second-color-hover);
+  }
+  
+  header ul{
+    list-style-type: none;
+  }
+  
+  header li{
+    display: inline-block;
+    font-size: 35px;
+    margin-left: 25px;
+  
+  }
+  
+  header a{
+    color: var(--primary-color);
+  }
+
+  header a:hover{
+    color: var(--primary-color-hover);
+  }
+  
+  .info{
+    background: var(--primary-color);
+    padding: 20px;
+  }
+  
+  .info > .container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .info a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.4s;
+  }
+
+  .info a:hover{
+    color: #bbb;
+  }
+  
+  .galeria > .container{
+    position: relative;
+    margin-top: 15px;
+    padding: 0;
+  }
+  
+  .slide-container{
+    display:flex;
+    background:red;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .slide-single{
+    width: 33.3%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .galeria .seta{
+    color: white;
+    background: var(--second-color);
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 125px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .galeria .seta:hover{
+    background: var(--second-color-hover);
+  }
+  
+  .galeria .slide-prev{
+    left: 15px;
+  }
+  
+  .galeria .slide-next{
+    right: 15px;
+  }
+  
+  .filtros > .container{
+    background: white;
+    margin-top: 20px;
+    padding: 20px 2%;
+    border-radius: 10px;
+  }
+  
+  .filtros form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .filtros select{
+    background: var(--primary-color);
+    border: 0;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: 0;
+    transition: 0.4s;
+  }
+
+  .filtros select:hover{
+    background: var(--primary-color-hover);
+  }
+  
+  .produtos > .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    
+    justify-content: space-around;
+  }
+  
+  .produtos .produto-single{
+    width: 22%;
+    background: white;
+    margin-top: 20px
+  }
+
+  .produtos .produto-single a{
+    text-decoration: none;
+    color: #595959;
+  }
+  
+  .produtos .img{
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center
+  }
+  
+  .produto-single .produto-content{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .produto-content h2{
+    font-size: 20px;
+    color: #2e2e2e;
+  }
+  
+  .produto-content .classificacao{
+    font-size: 15px;
+    color: var(--second-color);
+  }
+  
+  .produto-content .preco{
+    color: var(--destaque-color);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  footer{
+    background: var(--primary-color);
+    color: white;
+    margin-top: 15px;
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+  }
