@@ -10,21 +10,37 @@
     <header>
         <div class="container">
            <div class="logo"><a href="">Fones Store</a></div>
-           <div class="busca">
-             <form>
+           <div class="busca busca-desktop">
+             <form class="">
                <input type="text" placeholder="Buscar por...">
                <button>
                  <i class="fa-solid fa-magnifying-glass"></i>
                </button>
              </form>
            </div>
-           <nav classe="menu">
+           <nav class="menu-desktop">
              <ul class="lista">
                <li><a href="#"><i class="fa-regular fa-circle-user"></i></a></li>
                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
              </ul>
            </nav>
+           <nav class="menu-mobile">
+            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+            <ul class="lista">
+              <div class="busca busca-mobile">
+                <form class="">
+                  <input type="text" placeholder="Buscar por...">
+                  <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+              <li><a href="#"><i class="fa-regular fa-circle-user"></i> Usuário</a></li>
+              <li><a href="#"><i class="fa-regular fa-heart"></i> Favoritos</a></li>
+              <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
+            </ul>
+          </nav>
         </div>
      </header>
      <div class="info">
@@ -38,12 +54,11 @@
       <div class="galeria">
         <div class="container">
           <div class="slide-container">
-           <div class="slide-single" style="background-image: url(https://media.tenor.com/oSJPqFT3hsQAAAAM/dog.gif)"></div>
-           <div class="slide-single" style="background-image: url(https://i.gifer.com/15NJ.gif)"></div>
-          <div class="slide-single" style="background-image: url(https://i.gifer.com/GwA9.gif)"></div>
-            <div class="slide-single" style="background-image: url(https://media.tenor.com/oSJPqFT3hsQAAAAM/dog.gif)"></div>
-           <div class="slide-single" style="background-image: url(https://i.gifer.com/15NJ.gif)"></div>
-          <div class="slide-single" style="background-image: url(https://i.gifer.com/GwA9.gif)"></div>
+           <div class="slide-single" style="background-image: url(images/produto-exemple.jpg)"></div>
+           <div class="slide-single" style="background-image: url(images/banner-3.webp)"></div>
+           <div class="slide-single" style="background-image: url(images/banner-1.png)"></div>
+           <div class="slide-single" style="background-image: url(images/banner-4.webp)"></div>
+          <div class="slide-single" style="background-image: url(images/banner-2.jpg)"></div>
        </div>
           <div class="slide-next seta"><span><i class="fa-solid fa-caret-right"></i></span></div>
           <div class="slide-prev seta"><span><i class="fa-solid fa-caret-left"></i></span></div>
@@ -62,25 +77,23 @@
              <option value="7000">R$7000,00</option>
            </select>
            
-           <select name="capacidade" id="capacidade">
-             <option value="">Capacidade</option>
-             <option value="1000">R$1000,00</option>
-             <option value="5000">R$5000,00</option>
-             <option value="7000">R$7000,00</option>
+           <select name="modelo" id="modelo">
+             <option value="">Modelo</option>
+             <option value="1000">Wireless</option>
+             <option value="5000">Bluetooth</option>
+             <option value="7000">Com fio</option>
            </select>
            
            <select name="marca" id="marca">
              <option value="">Marca</option>
-             <option value="1000">R$1000,00</option>
-             <option value="5000">R$5000,00</option>
-             <option value="7000">R$7000,00</option>
+             <option value="1000">Baseus</option>
            </select>
            
            <select name="formato" id="formato">
              <option value="">Formato</option>
-             <option value="1000">R$1000,00</option>
-             <option value="5000">R$5000,00</option>
-             <option value="7000">R$7000,00</option>
+             <option value="1000">Headset</option>
+             <option value="5000">Headphone</option>
+             <option value="7000">Intra auricular</option>
            </select>
          </form>
        </div>
