@@ -108,24 +108,22 @@ header a:hover{
 
 .menu-icon{
   display: block;
-  font-size: 35px;
-  color: var(--primary-color);
   cursor: pointer;
 }
 
-.menu-icon:hover{
+.menu-icon > i{
+  color: var(--primary-color);
+  font-size: 35px;
+}
+
+.menu-icon > i:hover{
   color: var(--primary-color-hover);
 }
 
 .menu-mobile ul{
-  position: absolute;
-  right:0px;
-  top: 100px;
   backdrop-filter: blur(10px);
   background-color: #E8B90076;
-  width: 100%;
-  z-index: 2;
-  display: none;
+  text-align: center;
 }
 
 .menu-mobile li:first-child{
@@ -133,8 +131,6 @@ header a:hover{
 }
 
 .menu-mobile li{
-  width: 100%;
-  text-align: center;
   border-bottom: 1px solid var(--second-color);
 }
 
@@ -172,52 +168,16 @@ header a:hover{
 }
 
 .galeria > .container{
-  position: relative;
   margin-top: 10px;
   padding: 0;
 }
 
-.slide-container{
-  display:flex;
-  /* background:red; */
-  flex-wrap: wrap;
-  flex-flow: column wrap;
-  justify-content: center;
-  height: 400px;
-  overflow: hidden;
+.carousel{
+  /* height: 400px !important; */
 }
 
-.slide-single{
-  width: 33.3%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-}
-
-.galeria .seta{
-  color: white;
-  background: var(--second-color);
-  display: inline-block;
-  padding: 5px 15px;
-  font-size: 30px;
-  border-radius: 10px;
-  position: absolute;
-  top: 200px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.galeria .seta:hover{
-  background: var(--second-color-hover);
-}
-
-.galeria .slide-prev{
-  left: 15px;
-}
-
-.galeria .slide-next{
-  right: 15px;
+.carousel-item{
+ width: 33.3% !important;
 }
 
 .filtros > .container{
@@ -229,23 +189,13 @@ header a:hover{
 
 .filtros form{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
 .filtros select{
-  background: var(--primary-color);
-  border: 0;
-  color: white;
   font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  outline: 0;
-  transition: 0.4s;
-}
-
-.filtros select:hover{
-  background: var(--primary-color-hover);
 }
 
 .produtos > .container{

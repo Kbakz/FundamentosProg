@@ -1,35 +1,13 @@
-$(".galeria .slide-prev").click(function(){
-  prevSlide();
- });
-
- $(".galeria .slide-next").click(function(){
-  nextSlide();
- });
-
- $('.menu-icon').click(function(){
-    $('.menu-mobile ul').slideToggle();
- })
-
-function nextSlide(){
- var size = $(".slide-single").width();
- var fim = ($(".slide-single").length - 3) * size;
- var positionAtual = $(".slide-container").scrollLeft();
+$(document).ready(function(){
+  $('.dropdown-trigger').dropdown();
   
-  if(positionAtual < fim - size){
-    $(".slide-container").animate({scrollLeft: positionAtual + size});
-  }else{
-    $(".slide-container").animate({scrollLeft: 0});
- }
-}
+  $('.carousel').carousel({
+    fullWidth: true,
+    noWrap: true,
+    indicators: true
+  });
 
-function prevSlide(){
- var size = $(".slide-single").width();
- var fim = ($(".slide-single").length - 3) * size;
- var positionAtual = $(".slide-container").scrollLeft();
-  
-  if(positionAtual - size >= 0){
-    $(".slide-container").animate({scrollLeft: positionAtual - size});
-  }else{
-    $(".slide-container").animate({scrollLeft: fim});   
-  }
-}
+  $('select').formSelect();
+
+
+});

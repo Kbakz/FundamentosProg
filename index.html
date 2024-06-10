@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,15 +19,15 @@
                </button>
              </form>
            </div>
-           <nav class="menu-desktop">
+           <div class="menu-desktop">
              <ul class="lista">
                <li><a href="#"><i class="fa-regular fa-circle-user"></i></a></li>
                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
              </ul>
-           </nav>
-           <nav class="menu-mobile">
-            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+           </div>
+           <div class="menu-mobile">
+            <!-- <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
             <ul class="lista">
               <div class="busca busca-mobile">
                 <form class="">
@@ -36,11 +37,21 @@
                   </button>
                 </form>
               </div>
+              
               <li><a href="#"><i class="fa-regular fa-circle-user"></i> Usuário</a></li>
               <li><a href="#"><i class="fa-regular fa-heart"></i> Favoritos</a></li>
               <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
-            </ul>
-          </nav>
+            </ul> -->
+
+            <a class='dropdown-trigger menu-icon' href='#' data-target='dropdown1'><i class="fa-solid fa-bars"></i></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="#"><i class="fa-regular fa-circle-user"></i> Usuário</a></li>
+              <li><a href="#"><i class="fa-regular fa-heart"></i> Favoritos</a></li>
+              <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
+            </ul> 
+          </div>
         </div>
      </header>
      <div class="info">
@@ -51,50 +62,75 @@
        </div>  
      </div>
       
-      <div class="galeria">
-        <div class="container">
-          <div class="slide-container">
-           <div class="slide-single" style="background-image: url(images/produto-exemple.jpg)"></div>
-           <div class="slide-single" style="background-image: url(images/banner-3.webp)"></div>
-           <div class="slide-single" style="background-image: url(images/banner-1.png)"></div>
-           <div class="slide-single" style="background-image: url(images/banner-4.webp)"></div>
-          <div class="slide-single" style="background-image: url(images/banner-2.jpg)"></div>
-       </div>
-          <div class="slide-next seta"><span><i class="fa-solid fa-caret-right"></i></span></div>
-          <div class="slide-prev seta"><span><i class="fa-solid fa-caret-left"></i></span></div>
-        </div>
-     </div>
+      <!-- <div class="galeria">
+        <div class="container"> -->
+          
+          
+          <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src="images/produto-exemple.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="images/banner-3.webp"></a>
+            <a class="carousel-item" href="#three!"><img src="images/banner-1.png"></a>
+            <a class="carousel-item" href="#four!"><img src="images/banner-4.webp"></a>
+            <a class="carousel-item" href="#five!"><img src="images/banner-2.jpg"></a>
+          </div>
+          <!-- <div class="slide-next seta"><span><i class="fa-solid fa-caret-right"></i></span></div>
+          <div class="slide-prev seta"><span><i class="fa-solid fa-caret-left"></i></span></div> -->
+        <!-- </div>
+     </div> -->
        
      <div class="filtros">
        <div class="container">
          
          <form action="">
-           <p>Filtrar por</p>
-           <select name="precos" id="precos">
-             <option value="">Preços</option>
-             <option value="1000">R$1000,00</option>
-             <option value="5000">R$5000,00</option>
-             <option value="7000">R$7000,00</option>
-           </select>
+           <p>Filtrar por:</p>
            
-           <select name="modelo" id="modelo">
-             <option value="">Modelo</option>
-             <option value="1000">Wireless</option>
-             <option value="5000">Bluetooth</option>
-             <option value="7000">Com fio</option>
-           </select>
+           <!-- Uso do materialize nos Selects -->
+
+           <div class="input-field ">
+              <select name="precos" id="precos">
+                <option value="" disabled selected>Preços</option>
+                <option value="1000">R$1000,00</option>
+                <option value="5000">R$5000,00</option>
+                <option value="7000">R$7000,00</option>
+              </select>
+           </div>
+
+           <div class="input-field col s12">
+              <select name="precos" id="precos">
+                <option value="" disabled selected>Preços</option>
+                <option value="1000">R$1000,00</option>
+                <option value="5000">R$5000,00</option>
+                <option value="7000">R$7000,00</option>
+              </select>
+           </div>
+
+           <div class="input-field col s12">
+              <select name="modelo" id="modelo">
+                <option value="" disabled selected>Modelo</option>
+                <option value="1000">Wireless</option>
+                <option value="5000">Bluetooth</option>
+                <option value="7000">Com fio</option>
+              </select>
+           </div>
+
+           <div class="input-field col s12">
+              <select name="marca" id="marca">
+                <option value="" disabled selected>Marca</option>
+                <option value="1000">Baseus</option>
+              </select>
+           </div>
+            
+           <div class="input-field col s12">
+              <select name="formato" id="formato">
+                <option value="" disabled selected>Formato</option>
+                <option value="1000">Headset</option>
+                <option value="5000">Headphone</option>
+                <option value="7000">Intra auricular</option>
+              </select>
+           </div>
+            
            
-           <select name="marca" id="marca">
-             <option value="">Marca</option>
-             <option value="1000">Baseus</option>
-           </select>
-           
-           <select name="formato" id="formato">
-             <option value="">Formato</option>
-             <option value="1000">Headset</option>
-             <option value="5000">Headphone</option>
-             <option value="7000">Intra auricular</option>
-           </select>
+            
          </form>
        </div>
      </div>
@@ -180,9 +216,9 @@
      </div>  
      
      <footer><p>&copy Fones Store</p></footer>
-     <script src="https://kit.fontawesome.com/169263c84a.js" crossorigin="anonymous"></script>
      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-     <script src="https://sorgalla.com/jcarousel/dist/jquery.jcarousel.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <script src="https://kit.fontawesome.com/169263c84a.js" crossorigin="anonymous"></script>
      <script src="js/main.js"></script>
 </body>
 </html>
